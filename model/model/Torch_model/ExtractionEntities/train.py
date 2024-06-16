@@ -15,7 +15,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = sys.argv[2]
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 print("Using {} device".format(device))
-model_path = "../model_set/bert-base-chinese"
+model_path = "bert-base-chinese"
 tokenizer = PreTrainedTokenizerFast.from_pretrained(model_path)
 tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 
